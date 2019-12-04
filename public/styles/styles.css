@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Schoolbell&display=swap');
 
 img {
     width: 100%;
-    opacity: 0.5;
+    max-width: 100%;
+    /* opacity: 0.5; */
 }
 
 body {
@@ -10,27 +11,157 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
 h1, h2, h3, h4 {
     font-family: 'Schoolbell', sans-serif;
 }
 
-.intro article:nth-of-type(2) img {
-    position: fixed!important;
-    top: 0;
-}
-
-.overlay {
-    margin-top: 100vh;
-    padding-top: 50px;
+.container > section:not(:first-child):not(:nth-of-type(2)) {
     background-color: white;
     position: relative;
+}
+
+.intro h1,
+footer h2 {
+    color: #028389;
+}
+
+.intro article:nth-of-type(2) {
+    position: fixed;
+    width: 370px;
+    height: 100%;
+    max-height: 80vh;
+    left: calc(50% -  185px);
+    right: calc(50% -  185px);
+}
+
+
+.intro article:nth-of-type(2)::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 90%;
+    margin-left: 15%;
+    background: #20675B 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    opacity: 0.3;
+    filter: blur(43px);
+}
+
+.intro article:nth-of-type(2) img {
+    max-height: 80vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+article {
+    display: inline-block;
+}
+
+.intro {
+    height: 100vh;
+    position: relative;
+}
+
+.discover {
+    height: 150px;
+    position: fixed;
+    bottom: 0;
+}
+
+.discover a::before {
+    content: "";
+    height: 3px;
+    width: calc(100% + 20px);
+    background-color: #028389;
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+}
+
+.discover a {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 0;
+    bottom: 50px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #2D2D2D;
+    font-size: 14px;
+}
+
+.discover a:hover {
+    color: #2D2D2D;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.overlay img {
+    width: 100%;
+}
+.overlay {
+    padding: 0!important;
+    margin-top: 190px;
+    padding-bottom: 50px;
 }
 
 .overlay::before {
     content: "";
     display: block;
+    width: 100%;
+    margin-left: -15px;
+    height: 190px;
+    margin-top: -190px;
+    position: absolute;
+    background: transparent linear-gradient(180deg, #FCFCFC00 0%, #FCFCFC 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
 }
 
+.overlay .map {
+    position: relative;
+    overflow: hidden;
+    border: 10px solid #6EB4B6;
+    border-radius: 50px;
+}
+
+.pee {
+    fill: #FBB507;
+    position: absolute;
+    left: -120px;
+    top: calc(50% - 25px);
+    width: 300px;
+}
+
+.beers {
+    max-height: 200px;
+    left: -70px;
+    bottom: -50px;
+    position: absolute;
+    z-index: 1;
+}
+
+.overlay::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: calc(-100% + 200px);
+    height: calc(100% - 200px);
+    background-color: white;
+    z-index: 0;
+}
+
+
+/*  Animation of H1  */
 .ml9 {
   position: relative;
   font-weight: 200;
