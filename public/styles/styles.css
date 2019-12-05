@@ -1,9 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Schoolbell&display=swap');
 
+
+/*  Animation of H1  */
+.ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+
 img {
     width: 100%;
     max-width: 100%;
-    /* opacity: 0.5; */
 }
 
 body {
@@ -17,6 +40,20 @@ p {
 
 h1, h2, h3, h4 {
     font-family: 'Schoolbell', sans-serif;
+}
+
+body > .container {
+    position: relative;
+}
+
+body > .container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 70px;
+    bottom: -70px;
+    background-color: white;
+    position: absolute;
 }
 
 .container > section:not(:first-child):not(:nth-of-type(2)) {
@@ -109,7 +146,7 @@ article {
     width: 100%;
 }
 .overlay {
-    padding: 0!important;
+    padding: 0 0 200px!important;
     margin-top: 190px;
     padding-bottom: 50px;
 }
@@ -142,11 +179,14 @@ article {
 }
 
 .beers {
-    max-height: 200px;
-    left: -70px;
-    bottom: -50px;
+    left: -90px;
+    bottom: 100px;
     position: absolute;
     z-index: 1;
+}
+
+.beers svg {
+    max-height: 200px;
 }
 
 .overlay::after {
@@ -160,25 +200,75 @@ article {
     z-index: 0;
 }
 
-
-/*  Animation of H1  */
-.ml9 {
-  position: relative;
-  font-weight: 200;
-  font-size: 4em;
+.animation::before {
+    content: "";
+    display: block;
+    width: 200vw;
+    height: 100%;
+    left: -100vw;
+    top: 0;
+    background-color: #357979;
+    position: absolute;
+    z-index: 0;
 }
 
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
+.animation {
+    background-color: #028389;
+    padding: 50px 0;
 }
 
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em;
+.animation video {
+    width: 100%;
+    max-height: 100%;
+    position: relative;
+    outline: none;
+}
+
+.video-overlay-play-button {
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 100px);
+    padding: 10px calc(50% - 50px);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: block;
+    opacity: 0.95;
+    cursor: pointer;
+    background-image: linear-gradient(transparent, #000);
+    transition: opacity 150ms;
+}
+
+.video-overlay-play-button:hover {
+    opacity: 1;
+}
+
+.video-overlay-play-button.is-hidden {
+    display: none;
+}
+
+
+footer:not(.beers) {
+    background-color: white;
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer:not(.beers) p {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+footer:not(.beers) h2 {
+    font-size: 70px;
+    margin-top: 40px;
+}
+
+footer:not(.beers) p:last-of-type {
+    color: #028389;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 50px;
 }
