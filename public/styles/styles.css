@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Schoolbell&display=swap');
 
+body {
+    overflow-x: hidden;
+}
 
 /*  Animation of H1  */
 .ml9 {
