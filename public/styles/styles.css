@@ -157,13 +157,20 @@ article {
 .overlay::before {
     content: "";
     display: block;
-    width: 100%;
-    margin-left: -15px;
+    width: 200vw;
+    margin-left: -100vw;
     height: 190px;
     margin-top: -190px;
     position: absolute;
     background: transparent linear-gradient(180deg, #FCFCFC00 0%, #FCFCFC 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
+}
+
+.overlay h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    color: #028389;
 }
 
 .overlay .map {
