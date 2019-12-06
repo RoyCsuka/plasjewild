@@ -173,6 +173,20 @@ article {
     color: #028389;
 }
 
+.overlay .map::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    background-image: url(../img/legenda.jpg);
+    width: 285px;
+    height: 180px;
+    right: 0px;
+    border-radius: 20px 0 0 0;
+    background-size: 100%;
+}
+
 .overlay .map {
     position: relative;
     overflow: hidden;
