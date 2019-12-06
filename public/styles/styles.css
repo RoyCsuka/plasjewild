@@ -168,9 +168,15 @@ article {
 
 .overlay h3 {
     text-align: center;
-    margin-bottom: 30px;
     padding-top: 50px;
     color: #028389;
+}
+
+.overlay i {
+    text-align: center;
+    margin-bottom: 30px;
+    display: block;
+    color: #00000059;
 }
 
 .overlay .map::after {
